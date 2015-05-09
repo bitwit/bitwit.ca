@@ -113,7 +113,7 @@ docpadConfig = {
 					account: process.env.AWS_ACCESS_KEY_ID
 					secretKey: process.env.AWS_SECRET_KEY
 				}
-				container: config.AWS_BUCKET_NAME
+				container: process.env.AWS_BUCKET_NAME
 			}]
 
 
