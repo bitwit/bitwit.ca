@@ -1,4 +1,3 @@
-config = require './config.json'
 docpadConfig = {
 
 	# =================================
@@ -111,10 +110,10 @@ docpadConfig = {
 			cloudConfigs: [{
 				sunny: {
 					provider: 'aws'
-					account: config.accessKeyId
-					secretKey: config.secretAccessKey
+					account: process.env.AWS_ACCESS_KEY_ID
+					secretKey: process.env.AWS_SECRET_KEY
 				}
-				container: config.bucketName
+				container: config.AWS_BUCKET_NAME
 			}]
 
 
