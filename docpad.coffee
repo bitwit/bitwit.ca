@@ -99,15 +99,9 @@ docpadConfig = {
 	# Plugins
 
 	plugins:
-		#downloader:
-		#	downloads: [
-		#		{
-		#			name: 'Bootstrap'
-		#			path: 'src/files/vendor/twitter-bootstrap'
-		#			url: 'https://codeload.github.com/twbs/bootstrap/tar.gz/master'
-		#			tarExtractClean: true
-		#		}
-		#	]
+		cleanurls:
+			static: yes
+			trailingSlashes: yes
 		sunny:
 			cloudConfigs: [{
 				sunny: {
