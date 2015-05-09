@@ -85,13 +85,15 @@ docpadConfig = {
 
 	collections:
 		pages: (database) ->
-			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+			database.findAllLive({layout: 'page'}, [pageOrder:1,title:1])
 
 		blog: (database) ->
 			database.findAllLive({tags:$has:'post'}, (a, b) ->
 				return (new Date(b.attributes.postDate)) - (new Date(a.attributes.postDate))
 			)
 
+		work: (database) ->
+			database.findAllLive({type:'work'}, [pageOrder:1])
 
 	# =================================
 	# Plugins
