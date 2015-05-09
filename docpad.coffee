@@ -102,16 +102,6 @@ docpadConfig = {
 		cleanurls:
 			static: yes
 			trailingSlashes: yes
-		sunny:
-			cloudConfigs: [{
-				sunny: {
-					provider: 'aws'
-					account: process.env.AWS_ACCESS_KEY_ID
-					secretKey: process.env.AWS_SECRET_KEY
-				}
-				container: process.env.AWS_BUCKET_NAME
-			}]
-
 
 	# =================================
 	# DocPad Events
