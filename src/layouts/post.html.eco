@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<!-- Blog Post Content Column -->
+<div class="col-lg-8">
+	<article id="post" class="post">
+		<h1><%= @document.title %></h1>
+		<!-- Date/Time -->
+		<p><span class="glyphicon glyphicon-time"></span> Posted on <%= @document.postDate%></p>
+		<hr>
+		<!-- Preview Image -->
+		<!-- <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+		<hr>
+		-->
+		<div class="post-content"><%- @content %></div>
+	</article>
+	<hr>
+	<!-- Blog Comments -->
+</div>
+
+<!-- Blog Sidebar Widgets Column -->
+<div class="col-md-4">
+	<hr />
+	<!-- Blog Search Well -->
+	<div class="well">
+		<h4>Blog Search</h4>
+		<div class="input-group">
+			<input type="text" class="form-control">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+			</span>
+		</div>
+	 <!-- /.input-group -->
+	</div>
+	<!-- Blog Categories Well -->
+	<div class="well">
+	<% if @getRelatedDocuments() and @getRelatedDocuments().length: %>
+		<section id="related">
+			<h3>Related Posts</h3>
+			<nav class="linklist">
+				<% for document in @getRelatedDocuments(): %>
+					<li><span><%= document.postDate %></span>
+					&raquo;
+					<a href="<%= document.url %>"><%= document.title %></a></li>
+				<% end %>
+			</nav>
+		</section>
+	<% end %>
+	</div>
+</div>

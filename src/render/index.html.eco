@@ -1,0 +1,12 @@
+---
+title: Home
+layout: page
+---
+
+<nav class="linklist">
+	<% for document in @getCollection('blog').toJSON(): %>
+		<li><span><%= document.postDate %></span>
+		&raquo;
+		<a href="<%= document.url %>"><%= document.title %></a></li>
+	<% end %>
+</nav>
