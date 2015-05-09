@@ -6,4 +6,5 @@ before_script:
   - npm install -g docpad
 
 after_success:
+  - docpad generate
   - docpad deploy-sunny
