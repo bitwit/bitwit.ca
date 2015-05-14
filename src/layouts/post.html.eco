@@ -20,7 +20,7 @@ layout: default
 	<script type="text/javascript">
 		/* * * CONFIGURATION VARIABLES * * */
 		var disqus_shortname = 'bitwit';
-		var disqus_identifier = '<%= @document.slug.replace('blog-', '/blog/') %>';
+		var disqus_identifier = '<%= @document.disqusId %>';
 		
 		/* * * DON'T EDIT BELOW THIS LINE * * */
 		(function() {

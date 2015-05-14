@@ -92,6 +92,11 @@ docpadConfig = {
 				return (new Date(b.attributes.postDate)) - (new Date(a.attributes.postDate))
 			)
 
+		archive: (database) ->
+			database.findAllLive({wordpress_id:{$exists:yes}}, (a, b) ->
+				return (new Date(b.attributes.postDate)) - (new Date(a.attributes.postDate))
+			)
+
 		work: (database) ->
 			database.findAllLive({type:'work'}, [pageOrder:1])
 
