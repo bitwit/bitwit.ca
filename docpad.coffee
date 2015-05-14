@@ -88,7 +88,7 @@ docpadConfig = {
 			database.findAllLive({layout: 'page'}, [pageOrder:1,title:1])
 
 		blog: (database) ->
-			database.findAllLive({tags:$has:'post'}, (a, b) ->
+			database.findAllLive({tags:{$has:'post'},status:'publish'}, (a, b) ->
 				return (new Date(b.attributes.postDate)) - (new Date(a.attributes.postDate))
 			)
 
