@@ -39,25 +39,22 @@ module.exports = (grunt) ->
           dest: '/'
         }]
 
-    concurrent:
-      server: ['shell:serve', 'watch']
-      options:
-        logConcurrentOutput: true
-
     shell:
-      serve:
-        command: 'docpad run'
       generate:
         command: 'docpad generate'
 
     watch:
       render:
-        files: ['<%= dir.app %>/render/**/**'],
+        files: [
+          '<%= dir.app %>/render/**/**'
+          '<%= dir.app %>/layouts/**/**'
+        ],
         tasks: ['shell:generate'],
   })
 
   grunt.registerTask 'default', [
-    'concurrent:server'
+    'shell:generate'
+    'watch'
   ]
 
   grunt.registerTask 'deploy', [

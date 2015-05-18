@@ -6,7 +6,7 @@ layout: default
 	<article id="post" class="post">
 		<h1><%= @document.title %></h1>
 		<!-- Date/Time -->
-		<p><span class="glyphicon glyphicon-time"></span> Posted on <%= @document.postDate%></p>
+		<p><span class="glyphicon glyphicon-time"></span> Posted on <%= @document.date%></p>
 		<hr>
 		<!-- Preview Image -->
 		<!-- <img class="img-responsive" src="http://placehold.it/900x300" alt="">
@@ -37,17 +37,5 @@ layout: default
 	<hr />
 	<!-- Blog Categories Well -->
 	<div class="well">
-	<% if @getRelatedDocuments() and @getRelatedDocuments().length: %>
-		<section id="related">
-			<h3>Related Posts</h3>
-			<nav class="linklist">
-				<% for document in @getRelatedDocuments(): %>
-					<li><span><%= document.postDate %></span>
-					&raquo;
-					<a href="<%= document.url %>"><%= document.title %></a></li>
-				<% end %>
-			</nav>
-		</section>
-	<% end %>
 	</div>
 </div>

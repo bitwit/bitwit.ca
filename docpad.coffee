@@ -1,3 +1,5 @@
+moment = require 'moment'
+
 docpadConfig = {
 
 	# =================================
@@ -40,7 +42,6 @@ docpadConfig = {
 			# Styles
 			styles: [
 				"/styles/twitter-bootstrap.css"
-				"/styles/journal.css"
 				"/styles/style.css"
 			]
 
@@ -51,8 +52,6 @@ docpadConfig = {
 				"/scripts/bootstrap.min.js"
 				"/scripts/script.js"
 			]
-
-
 
 		# -----------------------------
 		# Helper Functions
@@ -78,6 +77,8 @@ docpadConfig = {
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
+		getPrettyDate: (doc)->
+			moment(doc.date).format 'MMM Do YYYY'
 
 	# =================================
 	# Collections
@@ -89,12 +90,12 @@ docpadConfig = {
 
 		blog: (database) ->
 			database.findAllLive({tags:{$has:'post'},status:'publish'}, (a, b) ->
-				return (new Date(b.attributes.postDate)) - (new Date(a.attributes.postDate))
+				return (new Date(b.attributes.date)) - (new Date(a.attributes.date))
 			)
 
 		archive: (database) ->
 			database.findAllLive({wordpress_id:{$exists:yes}}, (a, b) ->
-				return (new Date(b.attributes.postDate)) - (new Date(a.attributes.postDate))
+				return (new Date(b.attributes.date)) - (new Date(a.attributes.date))
 			)
 
 		work: (database) ->

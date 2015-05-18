@@ -1,12 +1,23 @@
 ---
-title: Home
 layout: home
+title: Bitwit.ca
 ---
 
 <nav class="linklist">
+	<ol class="list-unstyled">
 	<% for document in @getCollection('blog').toJSON(): %>
-		<li><span><%= document.postDate %></span>
-		&raquo;
-		<a href="<%= document.url %>"><%= document.title %></a></li>
+	<li>
+		<h3>
+			<a href="<%= document.url %>"><%= document.title %></a>
+		</h3>
+		<!-- Date/Time -->
+		<p><span class="glyphicon glyphicon-time"></span> Posted <%= @getPrettyDate(document) %></p>
+		<p><%= document.excerpt %></p>
+		<p>
+			<a href="<%= document.url %>">Read more...</a>
+		</p>
+	</li>
+	<hr />
 	<% end %>
+	</ol>
 </nav>
