@@ -4,8 +4,9 @@ comments: true
 date: 2015-05-25 08:00:00+00:00
 author: Kyle Newsome
 tags:
-  - 'postcard'
-  - 'post-mortem'
+  - post
+  - postcard
+  - post-mortem
 title: Postcard - A Post Mortem
 description: Postcard - A Post Mortem
 status: publish
