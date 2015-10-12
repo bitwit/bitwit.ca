@@ -1,4 +1,4 @@
-# Your [DocPad](http://docpad.org) Project
+# [Bitwit.ca](http://www.bitwit.ca
 
 ## License
-Copyright &copy; 2015+ All rights reserved.
+Copyright &copy; Kyle Newsome 2015+ All rights reserved.
