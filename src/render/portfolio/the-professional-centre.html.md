@@ -9,7 +9,7 @@ skills:
 	- Responsive Design
 	- SASS
 platform: Web
-pageOrder: 1
+pageOrder: 2
 ---
 
 Revamped client's website with a responsive design to fit all screen sizes from mobile to desktop.
