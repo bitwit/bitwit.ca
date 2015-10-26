@@ -8,7 +8,7 @@ tags:
   - swift
   - iOS
 title: General impressions on Swift 2.0
-description: Postcard - A Post Mortem
+description: General impressions on Swift 2.0
 status: publish
 excerpt: I know some developers like myself are just taking their first looks at the language so I wanted to summarize a few thoughts from my first experiences
 disqusId: swift-general-impressions
