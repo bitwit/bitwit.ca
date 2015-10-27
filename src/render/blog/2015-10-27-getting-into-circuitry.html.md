@@ -24,7 +24,7 @@ It was hard for me to figure out where to start at first. A few years I got my f
 
 ### Tron Club
 
-About 3 months ago, I learned of a new subscription startup, called Tron Club, that would ship about $20 of circuitry parts and a booklet every month. With that, I had my perfect motivator. All the hassle of buying parts and creating a lesson plan taken out of my hands.
+About 3 months ago, I learned of a new subscription startup, called [Tron Club][1], that would ship about $20 of circuitry parts and a booklet every month. With that, I had my perfect motivator. All the hassle of buying parts and creating a lesson plan taken out of my hands.
 
 After 2 kits worth of lessons, how has it been going so far? Really well, I think. The kits have been extremely useful in provided a wide breadth of peices to tickle one's curiousity. I didn't find all the instructions as thorough as I might have liked at times, but all the answers to my questions have been only a Youtube search away. Tron Club gave me all the right kind of terminology I needed to query the internet effectively.
 
@@ -50,8 +50,9 @@ Combining everything I learned from Tron Club, with my knowledge of C and the Ar
 
 ### It just keeps getting better
 
-Since developing a decent foundation in circuitry, my fascination with the subject matter has only increased. I find myself hanging out on /r/electronics every day trying to passively learn from others experiences. I can look at circuit board and actually identify a lot of the peices and how they are connecting. Everything that uses power in my house just seems a little less mysterious now, and that's __very empowering__.
+Since developing a decent foundation in circuitry, my fascination with the subject matter has only increased. I find myself hanging out on [/r/electronics][2] every day trying to passively learn from others experiences. I can look at circuit board and actually identify a lot of the peices and how they are connecting. Everything that uses power in my house just seems a little less mysterious now, and that's __very empowering__.
 
 It's been 2 very fun months of learning so far and I don't see myself stopping this hooby any time soon. Right now I'm fascinated by voltage dividers and their applications. What's a voltage divider, you ask? I'm working on it and I'm sure I'll be able to tell you all about them soon enough!
 
-
+[1]: http://www.tronclub.com "Tron Club"
+[2]: http://www.reddit.com/r/electronics "Reddit Electronics"
