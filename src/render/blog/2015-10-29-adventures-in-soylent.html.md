@@ -18,7 +18,7 @@ I decided to give [Soylent][1], the Silicon Valley sweetheart of meal replacemen
 
 I've never wanted to completely replace all food with liquid sustenance, however, certain meals do frustrate me. I've never been much of a breakfast eater, and sometimes lunch is just a road block in the middle of a busy day. These sorts of moments are what I want something like Soylent for.
 
-##### The Soylent experience
+### The Soylent experience
 
 You can [order boxes of these bottles online][1] in batches of 12. They offer both subscription and one-time purchases. I decided to try a subscription, which provides about a 40c savings per bottle (15% off) and brings the cost to under $2.50 per bottle. I was impressed with how fast they delivered; only 2 business days to my home in Toronto. Each bottle can be shelved for up to a year before expiry.
 
@@ -26,11 +26,11 @@ The drink itself, tastes a lot like a thick soy milk. I don't find it too bad at
 
 Speaking of snacks, it's been helping me keep away from those too. Before using Soylent I was much more inclined to skip a meal like breakfast, end up hungrier by lunch and indulge excessively in the remaining 2 meals of the day. The balance of not skipping meals provides a net benefit to my lifestyle in itself.
 
-##### Why not just eat/drink 'X' instead?
+### Why not just eat/drink 'X' instead?
 
 I understand that Soylent is not the first drink to replace a meal and foods like fruit, power bars etc... can provide solutions too. I'm not sure that any of these are a perfect solutions on their own either though. Fruits and other on-the-go edibles don't always fill me up enough, or provide a full balance of nutrients. The same is true of some meal replacement drinks. So far I've found Soylent to be pretty good at filling me up for a few hours as well as providing a good balance of nutrients, protein and calories (I'm not trying to go on a diet here).
 
-##### Verdict: Pretty Good
+### Verdict: Pretty Good
 
 I'm not a total convert yet. I'd like to do more research on other options out there too and possibly try some variants/knock offs, but I certainly see value in using them for some meals. If you're someone who is skipping meals, I definitely think a meal replacement drink can provide a benefit.
 
