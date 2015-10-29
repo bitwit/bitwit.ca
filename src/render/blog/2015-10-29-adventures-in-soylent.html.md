@@ -38,4 +38,4 @@ Soylent seems to fill me up better than other drinks I've tried. The volume of l
 
 I still love food, and only appreciate the real meals I have more. I just have a very utilitarian approach to some of those less important meals of life. The ones where you aren't out dining with friends, visiting family, or exploring new and interesting flavours for the sake of it.  I don't know if I'll use this, or something else like it, forever, but I definitely think it's a positive change so far over skipping meals.
 
-[1] http://www.soylent.com "Soylent Website"
+[1]: http://www.soylent.com "Soylent Website"
