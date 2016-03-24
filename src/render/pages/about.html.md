@@ -4,7 +4,7 @@ layout: page
 pageOrder: 2
 ---
 
-BitWit Solutions Canada is a Software Consulting company run by myself, Kyle Newsome. Since 2009, I have been consulting with teams to provide technical solutions that are both sensitive to business needs and pragmatic in technical implementation.
+Bitwit Solutions Canada is a Software Consulting company run by myself, Kyle Newsome. Since 2009, I have been consulting with teams to provide technical solutions that are both sensitive to business needs and pragmatic in technical implementation.
 
 I provide expertise in the areas of Web and Mobile Development, Project Management, User Interaction Design, Continuous Delivery and Developer Training.
 
