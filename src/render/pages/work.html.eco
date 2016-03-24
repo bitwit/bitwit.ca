@@ -3,7 +3,7 @@ title: Past Work
 layout: page
 pageOrder: 2
 ---
-<p>A sample of some of my personal/contracted work in the past 5 years.</p>
+<p>A sample of some projects from the past 6 years.</p>
 <ul class="list-unstyled">
 	<% for document in @getCollection('work').toJSON(): %>
 		<li class="row">
