@@ -8,7 +8,7 @@ tags:
   - coding
 title: I'm sticking to strong types and avoiding comments
 description: This blog is long overdue for an update, so let's kick things off with a hot take on loosely typed languages, inline commenting and other ways to shoot yourself in the foot
-status: publish
+status: draft
 excerpt: This blog is long overdue for an update, so let's kick things off with a hot take on loosely typed languages, inline commenting and other ways to shoot yourself in the foot
 disqusId: sticking-with-strong-types
 ---
