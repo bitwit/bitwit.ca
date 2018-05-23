@@ -6,11 +6,11 @@ author: Kyle Newsome
 tags:
   - post
   - coding
-title: I'm sticking to strong types and avoiding comments
+title: I'm sticking to static types and avoiding comments
 description: This blog is long overdue for an update, so let's kick things off with a hot take on loosely typed languages, inline commenting and other ways to shoot yourself in the foot
 status: draft
 excerpt: This blog is long overdue for an update, so let's kick things off with a hot take on loosely typed languages, inline commenting and other ways to shoot yourself in the foot
-disqusId: sticking-with-strong-types
+disqusId: sticking-with-static-types
 ---
 
 After years of silence on this blog, I decided that in the wake of more free time after the completion of my most recent contract, I should really hit the publish button again. So what better way to reignite the fire than come in hot with a strong opinion on loose types and inline comments.
