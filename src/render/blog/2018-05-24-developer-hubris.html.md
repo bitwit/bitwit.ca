@@ -24,7 +24,8 @@ Some days I fear that the experienced developer in me, if faced with the same pr
 
 #### Maserati Problems
 
-I'm not sure where I first heard the term "Maserati Problem", but it seems to have stemmed from the startup movement in tech. In layman's terms, it is a problem you create based on the assumption of future success. i.e. **What if customers experience XYZ after we have 10k daily active users?**. If the solution to that hypothetical adds weeks to the project, then now may not be the time to solve the problem. Developers can be prone to creating Maserati problems both in personal project and workplaces. We might be even worse at this when it comes to personal projects because there's noone to slap us across the face assert what is most important.
+I'm not sure where I first heard the term "Maserati Problem", but it seems to have stemmed from the startup movement in tech. In layman's terms, it is a problem you create based on the assumption of future success. i.e. **What if customers experience XYZ after we have 10k daily active users?**. If the solution to that hypothetical adds weeks to the project, then now may not be the time to solve the problem. Developers can be prone to creating Maserati problems both in personal projects and workplaces. We might be even worse at this when it comes to personal projects because there's no one to slap us across the face and assert what is most important.
+
 
 #### Quality Engineering vs Stubbornness
 
