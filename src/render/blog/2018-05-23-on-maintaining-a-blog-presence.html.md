@@ -7,6 +7,7 @@ tags:
   - post
   - blogging
 title: On maintaining a blog presence
+image: blog/Pencil_Emoji_large.png
 description: There have been many factors preventing me from blogging as much as I aspire to. I wanted to outline a few quickly and set resolutions to fix that.
 status: publish
 excerpt: There have been many factors preventing me from blogging as much as I aspire to. I wanted to outline a few quickly and set resolutions to fix that.
