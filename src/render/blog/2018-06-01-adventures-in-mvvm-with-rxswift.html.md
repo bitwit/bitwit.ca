@@ -24,7 +24,7 @@ I've experimented with RxSwift in several other projects and enjoyed it. This wa
 
 ### It feels clean, but there's more work involved upfront
 
-I'm a fan of the lightweight view controller that is primarily focused on bindings and isolated viewmodel code. Setting things up feels a little slow at first compared to the gains we are typically used to seeing with MVC. However, the clean separation of logic lays down some really nice foundations that give me a sense of maintainability and easy of testing. The undo/redo functionality worked itself really nicely into the viewmodel layer which felt like a nice abstraction.
+I'm a fan of the lightweight view controller that is primarily focused on bindings and isolated viewmodel code. Setting things up feels a little slow at first compared to the gains we are typically used to seeing with MVC. However, the clean separation of logic lays down some really nice foundations that give me a sense of maintainability and ease of testing. The undo/redo functionality worked itself really nicely into the viewmodel layer which felt like a nice abstraction.
 
 ### Working with UI as you are editing is sometimes tricky
 
@@ -33,7 +33,7 @@ I ran in to two notable areas of difficulty that related interaction with UI whi
 1. Using the RxCocoa basic example of connecting a tableview, you get left with a table that reloads it's rows on every change
 2. While typing in a textfield, relaying the text changes immediately would cause a feedback loop from the 'updated' signal.
 
-The first problem was reasonably straight forward to fix. You're simply better off using the `items(datasource:)` function and being your own data source. However, this burderns you with the responsibility of diffing your own changes. There's a GitHub repo RxDataSources that make this easy. I ran into some issues with this repo, likely due to version mismatchin so I ended use an existing diffing algorithm I've written.
+The first problem was reasonably straight forward to fix. You're simply better off using the `items(datasource:)` function and being your own data source. However, this burderns you with the responsibility of diffing your own changes. There's a GitHub repo RxDataSources that make this easy. I ran into some issues with this repo, likely due to version mismatching so I ended up using an existing diffing algorithm I've written.
 
 The second problem was a fast fix. If `textfield.isFirstResponder`, then I don't update the text since I can assume it's up to date. I'm uncertain of this solution's correctness in MVVM principles. It might be about as close as you can get without without fighting UIKit.
 
