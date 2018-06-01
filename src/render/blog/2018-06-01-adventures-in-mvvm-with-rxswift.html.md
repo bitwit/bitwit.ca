@@ -35,7 +35,12 @@ I ran in to two notable areas of difficulty that related interaction with UI whi
 
 The first problem was reasonably straight forward to fix. You're simply better off using the `items(datasource:)` function and being your own data source. However, this burderns you with the responsibility of diffing your own changes. There's a GitHub repo RxDataSources that make this easy. I ran into some issues with this repo, likely due to version mismatching so I ended up using an existing diffing algorithm I've written.
 
-The second problem was a fast fix. If `textfield.isFirstResponder`, then I don't update the text since I can assume it's up to date. I'm uncertain of this solution's correctness in MVVM principles. It might be about as close as you can get without without fighting UIKit.
+The second problem seems to have no ideal solution. I've tried two solutions now:
+
+1. If `textfield.isFirstResponder == true`, then I didn't update the textfield since I could assume it's up to date. This seemed like the easiest solution to not fighting UIKit. However, I've realized since posting this blog earlier today that this causes the currenlty editing cell to ignore edit change during Undo/Redo.
+2. My current solution is to not update the textfield at all from its delegate methods. If `textfield.isFirstResponder == true` when the model updates then I copy the previous `textfield.selectedRange` over and nudge it in the appropriate direction so that cursor position is maintained while actively typing.
+
+This goes to show some of the nuanced challenges of RxCocoa extensions when you dig in deeper.
 
 ### Next Steps
 
