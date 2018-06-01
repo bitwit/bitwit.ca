@@ -20,6 +20,8 @@ In the last couple of days I found some time to work on a simple iOS To-Do app. 
 
 I've experimented with RxSwift in several other projects and enjoyed it. This was the first time I've tried making an iOS app from scratch with MVVM and the RxCocoa extensions. I implemented a few features that would challenge RxCocoa. I thought inline editing in a collectionview and undo/redo would work. Here are some quick thoughts about it.
 
+<img class="img-thumbnail" src="https://github.com/bitwit/The-Do-List/raw/master/the-do-list-app.gif" />
+
 ### It feels clean, but there's more work involved upfront
 
 I'm a fan of the lightweight view controller that is primarily focused on bindings and isolated viewmodel code. Setting things up feels a little slow at first compared to the gains we are typically used to seeing with MVC. However, the clean separation of logic lays down some really nice foundations that give me a sense of maintainability and easy of testing. The undo/redo functionality worked itself really nicely into the viewmodel layer which felt like a nice abstraction.
