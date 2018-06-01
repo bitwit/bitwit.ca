@@ -37,8 +37,8 @@ The first problem was reasonably straight forward to fix. You're simply better o
 
 The second problem seems to have no ideal solution. I've tried two solutions now:
 
-1. If `textfield.isFirstResponder == true`, then I didn't update the textfield since I could assume it's up to date. This seemed like the easiest solution to not fighting UIKit. However, I've realized since posting this blog earlier today that this causes the currenlty editing cell to ignore edit changes during Undo/Redo.
-2. My current solution is to not update the textfield from its delegate methods. If `textfield.isFirstResponder == true` when the model updates then I copy the previous `textfield.selectedRange` over and nudge it in the appropriate direction so that cursor position is maintained while actively typing.
+1. If `textfield.isFirstResponder == true`, then I didn't update the textfield since I could assume it's up to date. This seemed like the easiest solution to not fighting UIKit. However, I've realized since posting this blog earlier today that this causes the current editing cell to ignore changes during Undo/Redo.
+2. My current solution is to not update the textfield from its delegate methods. If `textfield.isFirstResponder == true` then when the model updates I copy the previous `textfield.selectedRange` over and nudge it in the appropriate direction. This way the cursor position is maintained while actively typing.
 
 This goes to show some of the nuanced challenges of RxCocoa extensions when you dig in deeper.
 
