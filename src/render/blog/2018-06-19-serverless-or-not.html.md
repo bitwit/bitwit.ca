@@ -8,13 +8,14 @@ tags:
   - software
   - server-side
 title: Serverless or Not? That is the question
-description:
+description: Over the last few days I've been weighing the pros/cons of these services and hope my experiences might help others' own investigations.
 status: publish
-excerpt:
+excerpt: Over the last few days I've been weighing the pros/cons of these services and hope my experiences might help others' own investigations.
+image: blog/serverless/folder-structure.jpg
 disqusId: serverless-or-not
 ---
 
-This post is an anecdote about about playing with cloud functions. Over the last few days I've been weighing the pros/cons of these services and hope my experiences might help others' own investigations. This is about a hobby project I am working on, which is a great place to try things. There's not much code in this post but the project is 100% open source on GitHub.
+This post is an anecdote about about playing with cloud functions. Over the last few days I've been weighing the pros/cons of these services and hope my experiences might help others' own investigations. This is about a hobby project I am working on, which is a great place to try things. There's not much code in this post but the project is [open source on GitHub][4].
 
 ## Developer on a Dime
 
@@ -60,7 +61,7 @@ In order to avoid aggressively demanding resources and hitting limits too quickl
 
 ## Execution
 
-You can [follow along with the code I wrote here]().
+You can [follow along with the code I wrote here][4].
 A cloud function comes down to a **main function** that takes **Input** and a completion block. That block is called with either **Output** or an **Error**. For example, the search function's signature looks like this:
 
 <a href="/images/blog/serverless/cloud-func-example.png"><img class="img-responsive" alt="Serverless App Folder structure" src="/images/blog/serverless/cloud-func-example.png" /></a>
@@ -82,7 +83,7 @@ One thing I liked about taking the Serverless approach was that each of my funct
 
 ### Running remotely
 
-The local and remote experiences were mostly identical. I needed to input some environment variables from their management console instead of in my XCode scheme but that was about it. Testing the functions, the first response after idle time was usually a little bit cold, taking between 500ms-1000ms but things were more responsive between 50ms-100ms thereafter. This was just a measurement of the execution time too, not total HTTP response time. Cloud functions may not be ideal for things that should be super fast and are prone to testing a user's patience. With CDN caching in place I figured my function's average response times wouldn't be too slow though.
+The local and remote experiences were mostly identical. I needed to input some environment variables from their management console instead of in my XCode scheme but that was about it. Testing the functions, the first response after idle time was usually a little bit cold, taking between 500ms-1000ms but things were more responsive between 50ms-70ms thereafter. This was just a measurement of the execution time, I believe, not total HTTP response time. Cloud functions may not be ideal for things that should be super fast and are prone to testing a user's patience. With CDN caching in place I figured my function's average response times wouldn't be too slow though.
 
 ### Going Live
 
@@ -144,14 +145,19 @@ Before finally launching my website I wanted to do some load testing in order to
 These tests give me a decent idea of how many requests per minute I can handle when data is not in the cache. It also demonstrates pretty effectively why a cache is necessary. In reality there's going to be a combination of both happening. Information like the popular listings will cache quickly, since it's on the front page. Given the wide variety of possible search terms, there will be the most uncached queries delivered for search, which is a bit concerning from a response time perspective. I'm not as worried about # of queries per second right now.
 
 ### Choke points
-Overall the reponse times from the uncached services is not ideal whether testing via Serverless or Heroku. This observation led me to investigate the database a little bit further. My first suspicion was that I was not using CouchDB properly. However, I did set up indices for queries and tests against the database directly performed around 20ms on average. So somewhere between the database and the service things are slowing down. It's probably not very efficient to be connecting to the database over HTTP, interpreting it in JSON in the service then returning it again in JSON to the client. In a more traditional server set up we'd maintain a more direct connection to our database. A more efficient connection to the Cloudant database is probably even possible, but I didn't explore this any further. IBM's own demonstration code with KituraNet used HTTP, so this was the lead I followed.
+Overall the reponse times from the uncached services is not ideal whether testing via Serverless or Heroku. This observation led me to investigate the database a little bit further. My first suspicion was that I was not using CouchDB properly. However, I did set up indices for queries and tests against the database directly performed around 20ms on average. So somewhere between the database and the service things are slowing down. It's probably not very efficient to be connecting to the database over HTTP, interpreting it in JSON in the service then returning it again in JSON to the client. In a more traditional server setup we'd maintain a more direct connection to our database. I decided to try testing a simple ping API endpoint that does no databasing or HTTP communication at all. Just returns `{success:true}`.
+
+<img class="img-responsive" alt="176ms average response time" src="/images/blog/serverless/ping-results.jpg">
+
+Even a simple ping is taking 180ms on average. So HTTP work with the database is not helping, but the cloud function itself is not speedy at even it's slimmest. It even responded in over 900ms at it's worst. The variable response times are hard to deny.
 
 ## Pros & Cons
+With that, I quickly want to round up some quick pros and cons about using Serverless.
 
 #### Serverless Pros
-- No scaling, load balancing, self healing needed
+- No scaling, load balancing needed
 - Minimalistic approach to getting work done in the cloud
-- No containerization, large deployment artifacts
+- No large deployment artifacts
 - Easy to trigger any way youd like e.g. API call, git push, scheduled, another function
 - Pay only for what you use. Variable costs start at $0.
 
@@ -160,16 +166,17 @@ Overall the reponse times from the uncached services is not ideal whether testin
 - Many manual tasks for things you'd do in code e.g. API Endpoint setup, Environment vars
 - Once multiple functions want to share behavior or environment variables, it gets more complicated/arduous
 - Frontend and backend aren't easily developed side-by-side
-- Large data transfers between a database and the client might not be as fast if there are multiple layers of JSON transformation
+- Somewhat unrealiable response times
 - Still feels a lot like a server work to me. 
 
 ## Conclusions
 For the time being I will be running Swift Package Directory off of Serverless. It's been a fun experiment and I don't have much to lose by sticking it out. Should this experiment grow in popularity enough to have demanding server needs I will definitely think about moving to a more traditional set up. Lucky for me, I've already done the leg work of designing this project to function either serverless or inside of a Docker container on a service like Heroku.
 
-Probably one of my favorite features about Serverless right now is the triggered functions capability. I see use cases for little bits of triggered code. Some ideas boil down to a repetitive task, nothing else. Even if I migrated the API to Heroku I'd potentially keep scheduled like the bulk update as cloud functions. Those seem like the best use cases. This is a new tool for our toolbelt more than a replacement to everything we know so far. Traditional HTTP APIs with demanding response times are probably not going to be the first and best use case from what I've seen so far.
+Probably one of my favorite features about Serverless right now is the triggered functions capability. I see use cases for little bits of triggered code. Some ideas boil down to a repetitive task, nothing else. Even if I migrated the API to Heroku I'd potentially keep scheduled tasks like the bulk update as cloud functions. Those seem like the best use cases. This is a new tool for our toolbelt more than a replacement to everything we know so far. Traditional HTTP APIs with demanding response times are probably not going to be the first and best use case from what I've seen so far.
 
 If you have any questions or suggestions for improvement I'd love to hear them.
 
+You can see more in the [GitHub repo here][4]
 
 #### Epilogue: Features I'd like to see from Serverless
 - Be able to deploy a git repo of one or more functions
@@ -181,3 +188,4 @@ If you have any questions or suggestions for improvement I'd love to hear them.
 [1]: https://openwhisk.apache.org/
 [2]: https://github.com/apache/incubator-openwhisk-runtime-swift/tree/master/core/swift41Action
 [3]: https://swiftpackage.directory/
+[4]: https://github.com/bitwit/swift-package-directory
