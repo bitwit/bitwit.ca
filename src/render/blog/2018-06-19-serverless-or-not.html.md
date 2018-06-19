@@ -180,10 +180,11 @@ You can see more in the [GitHub repo here][4]
 
 #### Epilogue: Features I'd like to see from Serverless
 - Be able to deploy a git repo of one or more functions
-- Global environment variables that apply to all functions in a group
+- ~~Global environment variables that apply to all functions in a group~~ Apparently this can be done with Serverless packages (subgroups) but I had trouble hooking package actions up with the API layer
 - Better metrics
-- Better HTTP error status code and response control
+- ~~Better HTTP error status code and response control~~ [Available](https://github.com/apache/incubator-openwhisk/blob/master/docs/webactions.md#handling-http-requests-with-actions)
 - Better logging features. See all printed output.
+
 
 [1]: https://openwhisk.apache.org/
 [2]: https://github.com/apache/incubator-openwhisk-runtime-swift/tree/master/core/swift41Action
