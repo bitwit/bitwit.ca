@@ -14,7 +14,6 @@ disqusId: '1650 http://kylnew.com/?p=1650'
 categories:
 - Blog
 tags:
-- post
 - collaboration
 - developer life
 - discussion

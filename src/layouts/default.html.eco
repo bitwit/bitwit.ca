@@ -84,8 +84,6 @@
 
 		<!-- Footer -->
 		<footer>
-			<p class="pull-right">&copy; Kyle Newsome <%- (new Date()).getFullYear() %></p>
-			<a href="https://twitter.com/kylnew">Twitter</a>, <a href="https://github.com/bitwit">Github</a>
 		</footer>
 	</div><!-- /container -->
 

@@ -1,9 +1,9 @@
 ---
-title: Past Work
+title: 🛠 Past Work
 layout: page
 pageOrder: 2
 ---
-<p>A sample of some personal and contracted projects from the past 9 years. For confidentiality reasons, not all work can be listed here.</p>
+<p>A sample of projects from the past 9 years. For confidentiality reasons, not all work can be listed here.</p>
 <ul class="list-unstyled">
 	<% for document in @getCollection('work').toJSON(): %>
 		<li class="row">

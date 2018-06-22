@@ -1,23 +1,16 @@
 ---
-layout: home
+layout: default
 title: Bitwit.ca
 ---
 
-<nav class="linklist">
-	<ol class="list-unstyled">
-	<% for document in @getCollection('blog').toJSON(): %>
-	<li>
-		<h3>
-			<a href="<%= document.url %>"><%= document.title %></a>
-		</h3>
-		<!-- Date/Time -->
-		<p><span class="glyphicon glyphicon-time"></span> Posted <%= @getPrettyDate(document) %></p>
-		<p><%= document.excerpt %></p>
-		<p>
-			<a href="<%= document.url %>">Read more...</a>
-		</p>
-	</li>
-	<hr />
-	<% end %>
-	</ol>
-</nav>
+<% %>
+
+<h1 class="text-center">💻 <br />Deep iOS &amp; Apple Expertise</h1>
+
+<h2 class="text-center">Make sure your brand&nbsp;is
+<span class="five-star">⭐️️️️️️️️️⭐️⭐️⭐️⭐️</span>
+in the most important&nbsp;App&nbsp;Store
+<br />for revenue generation</h2>
+
+<a class="learn-more" href="/pages/about">Learn More</a>
+

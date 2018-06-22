@@ -13,7 +13,6 @@ disqusId: '1679 http://kylnew.com/?p=1679'
 categories:
 - Blog
 tags:
-- post
 - AngularJS
 - discussion
 excerpt: A few weeks ago Gabriel Scholz wrote a blog about frictionless data preloading in AngularJS which I quite enjoyed. He also updated the blog later conceding that there was an even better method. From my experience, neither options were ideal and I wanted to write a short entry on how I propose we preload data

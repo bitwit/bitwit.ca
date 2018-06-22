@@ -4,7 +4,6 @@ comments: true
 date: 2018-05-23 14:00:00+00:00
 author: Kyle Newsome
 tags:
-  - post
   - blogging
 title: On maintaining a blog presence
 image: blog/Pencil_Emoji_large.png

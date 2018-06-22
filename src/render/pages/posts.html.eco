@@ -1,13 +1,25 @@
 ---
-title: Blog
+title: 📝 Blog
 layout: page
 pageOrder: 1
 ---
 
 <nav class="linklist">
+	<ol class="list-unstyled">
 	<% for document in @getCollection('blog').toJSON(): %>
-		<li><span><%= @getPrettyDate(document) %></span>
-		&raquo;
-		<a href="<%= document.url %>"><%= document.title %></a></li>
+	<li>
+		<h3>
+			<a href="<%= document.url %>"><%= document.title %></a>
+		</h3>
+		<!-- Date/Time -->
+		<p>🕓 <%= @getPrettyDate(document) %></p>
+		<p>✏️ <%= document.author %></p>
+		<p><%= document.excerpt %></p>
+		<p>
+			<a href="<%= document.url %>">Read more...</a>
+		</p>
+	</li>
+	<hr />
 	<% end %>
+	</ol>
 </nav>

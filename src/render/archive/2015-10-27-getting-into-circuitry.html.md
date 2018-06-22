@@ -4,7 +4,6 @@ comments: true
 date: 2015-10-27 08:00:00+00:00
 author: Kyle Newsome
 tags:
-  - post
   - circuitry
   - electronics
 title: Getting into circuitry

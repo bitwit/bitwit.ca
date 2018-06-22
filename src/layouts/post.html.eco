@@ -6,7 +6,8 @@ layout: default
 	<article id="post" class="post">
 		<h1><%= @document.title %></h1>
 		<!-- Date/Time -->
-		<p><span class="glyphicon glyphicon-time"></span> Posted on <%= @document.date%></p>
+		<p>🕓 <%= @getPrettyDate(@document) %></p>
+		<p>✏️ <%= @document.author %></p>
 		<hr>
 		<!-- Preview Image -->
 		<!-- <img class="img-responsive" src="http://placehold.it/900x300" alt="">
@@ -21,8 +22,11 @@ layout: default
 	<hr />
 	<!-- Blog Categories Well -->
 	<div class="well">
-		<a href="https://twitter.com/kylnew">Twitter</a>
+		💻
 		<br />
-		<a href="https://github.com/bitwit">Github</a>
+		Bitwit Solutions Canada is an Apple focused development agency in Toronto, Canada.
+		<br />
+		Interested in working with us?
+		<br /><a href="mailto:<%= @site.email %>">Get in touch</a>
 	</div>
 </div>

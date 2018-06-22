@@ -4,7 +4,6 @@ comments: true
 date: 2015-10-29 14:00:00+00:00
 author: Kyle Newsome
 tags:
-  - post
   - food
   - soylent
 title: Adventures in Soylent (2.0)

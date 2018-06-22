@@ -14,7 +14,6 @@ categories:
 - Blog
 tags:
 - tojam
-- post
 excerpt: For 3 years now I have participated in the Toronto Game Jam(#TOJam). It is pretty much my number one reason to live in Toronto these days. Despite not regularly practising game development on or off the clock, I do still consider it a hobby and this my favourite place to exercise it.
 ---
 

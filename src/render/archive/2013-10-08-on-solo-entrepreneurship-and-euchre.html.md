@@ -17,7 +17,6 @@ categories:
 tags:
 - developer life
 - idevblogaday
-- post
 ---
 
 If you're a multi-talented individual, others might tell you that you can do it all. Heck, you might very well be telling yourself this too. However, whether you actually **_should_** do a venture on your own is a totally different matter. Personally, I struggle with this issue and have ultimately concluded that, no, I shouldn't be trying to do every aspect of a project by myself. Somewhere in that revelation I realized an interesting similarity between my work challenges and one of my favourite card games, Euchre.
