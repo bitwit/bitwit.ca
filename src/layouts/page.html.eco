@@ -6,3 +6,8 @@ layout: default
 	<h1><%= @document.title %></h1>
 	<div class="page-content"><%- @content %></div>
 </article>
+
+<div class="well">
+	Interested in working with us?
+	<br /><a href="mailto:<%= @site.email %>">Get in touch</a>
+</div>

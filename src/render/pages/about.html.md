@@ -1,7 +1,7 @@
 ---
 title: ℹ️ About
 layout: page
-pageOrder: 2
+pageOrder: 1
 ---
 
 We focus on maintaining strong and current knowledge on all Apple platform capabilities and guidelines
