@@ -38,6 +38,7 @@ docpadConfig = {
 
 			# The website author's email
 			email: "kyle@bitwit.ca"
+			phone: ["+1", "647", "809", "8981"].join("")
 
 			# Styles
 			styles: [

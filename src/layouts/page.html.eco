@@ -10,4 +10,5 @@ layout: default
 <div class="well">
 	Interested in working with us?
 	<br /><a href="mailto:<%= @site.email %>">Get in touch</a>
+	<br /><a href="tel:<%= @site.phone %>"><%= @site.phone %></a>
 </div>
