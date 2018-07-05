@@ -12,7 +12,7 @@ We deliver applications with strong documentation, including justifcation and le
 
 ### 🎨 Design Partnerships
 
-We are a software engineering agency. Great software is impossible without great design. That is why we delegate this specialty to design experts. We believe in fostering strong relationships with designers in order to deliver modern and sophisticated interfaces that play well within the bounds of Apple's platforms.
+We are a software engineering consultancy. Great software is impossible without great design. That is why we delegate this specialty to design experts. We believe in fostering strong relationships with designers in order to deliver modern and sophisticated interfaces that play well within the bounds of Apple's platforms.
 
 We are experienced in working with designers from all backgrounds such as print, web, gaming etc. We lean in to the design process.
 
